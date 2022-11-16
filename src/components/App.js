@@ -44,9 +44,9 @@ class App extends Component {
 
         <ol>
           {this.cityList.map((filteredCities,i) =>
-            filteredCities.country === "India" ? (
+          {filteredCities.country === "India" ? (
               <li key={`location${i+1}`}>{filteredCities.name}</li>
-            ) : null
+            ) :(null)}
           )}
         </ol>
       </div>
