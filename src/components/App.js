@@ -39,16 +39,12 @@ class App extends Component {
 
   render() {
     return (
-      <div id="main">
-        {/* Do not remove the main div */}
-
-        <ol>
-          {this.cityList.map((filteredCities,i) =>
-          {filteredCities.country === "India" ? (
-              <li key={`location${i+1}`}>{filteredCities.name}</li>
-            ) :(null)}
-          )}
-        </ol>
+<div id="main">
+      <ol>
+      {this.cityList.filter((city) => city.country == 'India').map((e,i)=>{
+      return  (<li key={`location${i+1}`}>{e.name}</li>)
+      })}
+      </ol>
       </div>
     );
   }
